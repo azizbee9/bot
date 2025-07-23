@@ -19,9 +19,7 @@ PROXY_URL = "http://proxy.server:3128"
 logging.basicConfig(level=logging.INFO)
 
 
-timeout = ClientTimeout(total=60)
-session = AiohttpSession(proxy=PROXY_URL, timeout=timeout)
-
+session = AiohttpSession(proxy=PROXY_URL, timeout=60)
 bot = Bot(token=API_TOKEN, session=session)
 dp = Dispatcher()
 
